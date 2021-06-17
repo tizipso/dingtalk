@@ -1,7 +1,7 @@
 # Dingtalk for Hyperf
 
 ## 介绍
-Based on mingyoung/dingtalk developed a DingTalk expansion package adapted to Yii. - 基于 mingyoung/dingtalk 开发的适配于 Hyperf 的钉钉扩展包。
+Based on mingyoung/dingtalk developed a DingTalk expansion package adapted to Hyperf. - 基于 mingyoung/dingtalk 开发的适配于 Hyperf 的钉钉扩展包。
 
 封装了钉钉身份验证、通讯录管理、消息通知、审批、群机器人、业务事件回调管理等服务端接口，让开发者可以使用简单的配置，提供简洁的 API 以供方便快速地调用钉钉接口
 
