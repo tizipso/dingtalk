@@ -43,7 +43,7 @@ class Client extends BaseClient
             'json' => [
                 'offset' => $offset,
                 'size' => $size,
-                'role_id' => $roleId
+                'role_id' => $roleId,
             ],
         ]);
     }
@@ -58,7 +58,9 @@ class Client extends BaseClient
     public function getGroups(int $groupId): ResponseInterface
     {
         return $this->http->client->post('topapi/role/getrolegroup', [
-            'json' => ['group_id' => $groupId]
+            'json' => [
+                'group_id' => $groupId,
+            ],
         ]);
     }
 
@@ -74,7 +76,7 @@ class Client extends BaseClient
         return $this->http->client->post('topapi/role/getrole', [
             'json' => [
                 'roleId' => $roleId,
-            ]
+            ],
         ]);
     }
 
@@ -92,7 +94,7 @@ class Client extends BaseClient
             'json' => [
                 'groupId' => $groupId,
                 'roleName' => $roleName,
-            ]
+            ],
         ]);
     }
 
@@ -111,7 +113,7 @@ class Client extends BaseClient
             'json' => [
                 'roleId' => $roleId,
                 'roleName' => $roleName,
-            ]
+            ],
         ]);
     }
 
@@ -141,7 +143,7 @@ class Client extends BaseClient
         return $this->http->client->post('role/add_role_group', [
             'json' => [
                 'name' => $name,
-            ]
+            ],
         ]);
     }
 }

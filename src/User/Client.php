@@ -21,7 +21,7 @@ class Client extends BaseClient
     public function get(string $userid, string $language = null): ResponseInterface
     {
         return $this->http->client->post('topapi/v2/user/get', [
-            'form_params' => [
+            'json' => [
                 'json' => $userid,
                 'language' => $language,
             ],
@@ -85,7 +85,7 @@ class Client extends BaseClient
     public function getDetailedUsers(int $dept_id, int $cursor, int $size, string $order = null, bool $limit = false, string $language = null): ResponseInterface
     {
         return $this->http->client->post('topapi/v2/user/list', [
-            'form_params' => [
+            'json' => [
                 'dept_id' => $dept_id,
                 'cursor' => $cursor,
                 'size' => $size,
@@ -196,7 +196,7 @@ class Client extends BaseClient
     public function getUserByCode(string $code): ResponseInterface
     {
         return $this->http->client->get('user/getuserinfo', [
-            'form_params' => [
+            'json' => [
                 'code' => $code,
             ]
         ]);
@@ -254,7 +254,7 @@ class Client extends BaseClient
     public function getCount(bool $only_active = false): ResponseInterface
     {
         return $this->http->client->post('topapi/user/count', [
-            'form_params' => [
+            'json' => [
                 'only_active' => $only_active,
             ],
         ]);
