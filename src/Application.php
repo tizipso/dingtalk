@@ -26,6 +26,7 @@ use Pimple\Container;
  * @property Attendance\Client           $attendance
  * @property Department\Client           $department
  * @property Conversation\Client         $conversation
+ * @property Personnel\Client            $personnel
  * @property Kernel\Http\Client          $client
  * @property Logger                      $logger
  * @property Kernel\Server               $server
@@ -58,6 +59,7 @@ class Application extends Container
         Attendance\ServiceProvider::class,
         Department\ServiceProvider::class,
         Conversation\ServiceProvider::class,
+        Personnel\ServiceProvider::class,
         Kernel\Providers\ClientServiceProvider::class,
         Kernel\Providers\LoggerServiceProvider::class,
         Kernel\Providers\ServerServiceProvider::class,

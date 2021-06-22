@@ -22,7 +22,7 @@ class Client extends BaseClient
     {
         return $this->http->client->post('topapi/v2/user/get', [
             'json' => [
-                'json' => $userid,
+                'userid' => $userid,
                 'language' => $language,
             ],
         ]);

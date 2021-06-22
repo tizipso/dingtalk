@@ -195,4 +195,9 @@ class SubscribeConstant
      * 会议室创建、更新、删除等
      */
     const MEETINGROOM_ROOM_INFO = 'meetingroom_room_info';
+
+    /**
+     * 人事档案变动
+     */
+    const HRM_USER_RECORD_CHANGE = 'hrm_user_record_change';
 }
