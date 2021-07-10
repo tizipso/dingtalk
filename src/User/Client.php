@@ -53,10 +53,10 @@ class Client extends BaseClient
      * @param string|null $order
      * @param bool|null   $limit
      * @param string|null $language
-     * @return mixed
+     * @return ResponseInterface
      * @throws GuzzleException
      */
-    public function getUsers(int $dept_id, int $cursor, int $size, string $order = null, bool $limit = false, string $language = null)
+    public function getUsers(int $dept_id, int $cursor, int $size, string $order = null, bool $limit = false, string $language = null): ResponseInterface
     {
         return $this->http->client->post('topapi/v2/user/listsimple', [
             'json' => [
@@ -196,7 +196,7 @@ class Client extends BaseClient
     public function getUserByCode(string $code): ResponseInterface
     {
         return $this->http->client->get('user/getuserinfo', [
-            'json' => [
+            'query' => [
                 'code' => $code,
             ]
         ]);
