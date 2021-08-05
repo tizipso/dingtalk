@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Dingtalk;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\HandlerStack;
 use Hyperf\Guzzle\CoroutineHandler;
 
@@ -52,7 +51,6 @@ class Robot
      * @param array $message
      *
      * @return mixed
-     * @throws GuzzleException
      */
     public function send(array $message)
     {

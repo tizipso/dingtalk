@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Dingtalk\User;
 
-use GuzzleHttp\Exception\GuzzleException;
 use Dingtalk\Kernel\BaseClient;
 use Psr\Http\Message\ResponseInterface;
 
@@ -16,7 +15,6 @@ class Client extends BaseClient
      * @param string      $userid
      * @param string|null $language
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function get(string $userid, string $language = null): ResponseInterface
     {
@@ -33,7 +31,6 @@ class Client extends BaseClient
      *
      * @param int $dept_id
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getUserIds(int $dept_id): ResponseInterface
     {
@@ -54,7 +51,6 @@ class Client extends BaseClient
      * @param bool|null   $limit
      * @param string|null $language
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getUsers(int $dept_id, int $cursor, int $size, string $order = null, bool $limit = false, string $language = null): ResponseInterface
     {
@@ -80,7 +76,6 @@ class Client extends BaseClient
      * @param bool        $limit
      * @param string|null $language
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getDetailedUsers(int $dept_id, int $cursor, int $size, string $order = null, bool $limit = false, string $language = null): ResponseInterface
     {
@@ -99,7 +94,6 @@ class Client extends BaseClient
     /**
      * 获取管理员列表
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function administrators(): ResponseInterface
     {
@@ -111,7 +105,6 @@ class Client extends BaseClient
      *
      * @param string $userid
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function administratorScope(string $userid): ResponseInterface
     {
@@ -127,7 +120,6 @@ class Client extends BaseClient
      *
      * @param string $unionid
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getUseridByUnionid(string $unionid): ResponseInterface
     {
@@ -143,7 +135,6 @@ class Client extends BaseClient
      *
      * @param array $params
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function create(array $params): ResponseInterface
     {
@@ -159,7 +150,6 @@ class Client extends BaseClient
      * @param array  $params
      *
      * @return mixed
-     * @throws GuzzleException
      */
     public function update(string $userid, array $params)
     {
@@ -175,7 +165,6 @@ class Client extends BaseClient
      *
      * @param string $userid
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function delete(string $userid): ResponseInterface
     {
@@ -191,7 +180,6 @@ class Client extends BaseClient
      *
      * @param string $code
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getUserByCode(string $code): ResponseInterface
     {
@@ -208,7 +196,6 @@ class Client extends BaseClient
      * @param array|string $userIds
      * @param array|string $roleIds
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function addRoles($userIds, $roleIds): ResponseInterface
     {
@@ -229,7 +216,6 @@ class Client extends BaseClient
      * @param array|string $userIds
      * @param array|string $roleIds
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function removeRoles($userIds, $roleIds): ResponseInterface
     {
@@ -249,7 +235,6 @@ class Client extends BaseClient
      *
      * @param bool $only_active
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getCount(bool $only_active = false): ResponseInterface
     {
@@ -264,7 +249,6 @@ class Client extends BaseClient
      * 获取企业已激活的员工人数
      *
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getActivatedCount(): ResponseInterface
     {
@@ -276,7 +260,6 @@ class Client extends BaseClient
      *
      * @param string $mobile
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getUserIdByPhone(string $mobile = ''): ResponseInterface
     {
@@ -296,7 +279,6 @@ class Client extends BaseClient
      * @param int    $size
      * @param string $query_date
      * @return ResponseInterface
-     * @throws GuzzleException
      */
     public function getInactiveUsers(bool $is_active, array $dept_ids, int $offset, int $size, string $query_date): ResponseInterface
     {
