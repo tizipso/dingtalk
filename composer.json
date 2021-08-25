@@ -28,7 +28,8 @@
     "hyperf/http-server": "^2.2",
     "hyperf/logger": "^2.2",
     "nesbot/carbon": "^2.49",
-    "pimple/pimple": "*"
+    "pimple/pimple": "*",
+    "symfony/http-foundation": "^5.3"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.14",
